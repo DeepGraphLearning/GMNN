@@ -15,9 +15,9 @@ def get_optimizer(name, parameters, lr, weight_decay=0):
     elif name == 'adagrad':
         return torch.optim.Adagrad(parameters, lr=lr, weight_decay=weight_decay)
     elif name == 'adam':
-        return torch.optim.Adam(parameters, lr=lr, weight_decay=weight_decay) # use default lr
+        return torch.optim.Adam(parameters, lr=lr, weight_decay=weight_decay)
     elif name == 'adamax':
-        return torch.optim.Adamax(parameters, lr=lr, weight_decay=weight_decay) # use default lr
+        return torch.optim.Adamax(parameters, lr=lr, weight_decay=weight_decay)
     else:
         raise Exception("Unsupported optimizer: {}".format(name))
 
