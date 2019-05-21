@@ -142,66 +142,39 @@ def update_q_data():
         target_q[idx_train] = temp
 
 def pre_train(epoches):
-
     best = 0.0
-
     init_q_data()
-
     results = []
-
     for epoch in range(epoches):
-
         loss = trainer_q.update_soft(inputs_q, target_q, idx_train)
-
         _, preds, accuracy_dev = trainer_q.evaluate(inputs_q, target, idx_dev)
-
         _, preds, accuracy_test = trainer_q.evaluate(inputs_q, target, idx_test)
-
         results += [(accuracy_dev, accuracy_test)]
-
         if accuracy_dev > best:
             best = accuracy_dev
             state = dict([('model', copy.deepcopy(trainer_q.model.state_dict())), ('optim', copy.deepcopy(trainer_q.optimizer.state_dict()))])
-
     trainer_q.model.load_state_dict(state['model'])
     trainer_q.optimizer.load_state_dict(state['optim'])
-
     return results
 
 def train_p(epoches):
-
     update_p_data()
-
     results = []
-
     for epoch in range(epoches):
-
         loss = trainer_p.update_soft(inputs_p, target_p, idx_all)
-
         _, preds, accuracy_dev = trainer_p.evaluate(inputs_p, target, idx_dev)
-
         _, preds, accuracy_test = trainer_p.evaluate(inputs_p, target, idx_test)
-
         results += [(accuracy_dev, accuracy_test)]
-
     return results
 
 def train_q(epoches):
-
     update_q_data()
-
     results = []
-
     for epoch in range(epoches):
-
         loss = trainer_q.update_soft(inputs_q, target_q, idx_all)
-
         _, preds, accuracy_dev = trainer_q.evaluate(inputs_q, target, idx_dev)
-
         _, preds, accuracy_test = trainer_q.evaluate(inputs_q, target, idx_test)
-
         results += [(accuracy_dev, accuracy_test)]
-
     return results
 
 base_results, q_results, p_results = [], [], []
