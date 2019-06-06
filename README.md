@@ -10,7 +10,18 @@ GMNN can also be applied to many other applications, such as unsupervised node r
 
 ## Illustration
 ### Semi-supervised Object Classification
-<p align="center"><img width="70%" src="figures/problem.png"/></p>
+<p align="left"><img width="50%" src="figures/problem.png"/></p>
+
+### Two Graph Neural Networks
+<p align="left"><img width="50%" src="figures/component.png"/></p>
+
+### Optimization
+
+#### E-Step
+<p align="left"><img width="50%" src="figures/e-step.png"/></p>
+
+#### M-Step
+<p align="left"><img width="50%" src="figures/m-step.png"/></p>
 
 ## Data
 For semi-supervised object classification, we provide the Cora, Citeseer and Pubmed datasets. For unsupervised node representation learning, we provide the Cora and Citeseer datasets. The datasets are constructed by [Yang et al., 2016](https://arxiv.org/abs/1603.08861), and we preprocess the datasets into our format by using the [codes](https://github.com/tkipf/gcn) from Thomas N. Kipf. Users can also use their own datasets by following the format of the provided datasets.
