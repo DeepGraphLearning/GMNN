@@ -12,16 +12,18 @@ GMNN can also be applied to many other applications, such as unsupervised node r
 For semi-supervised object classification, we provide the Cora, Citeseer and Pubmed datasets. For unsupervised node representation learning, we provide the Cora and Citeseer datasets. The datasets are constructed by [Yang et al., 2016](https://arxiv.org/abs/1603.08861), and we preprocess the datasets into our format by using the [codes](https://github.com/tkipf/gcn) from Thomas N. Kipf. Users can also use their own datasets by following the format of the provided datasets.
 
 ## Usage
-The codes for semi-supervised object classification can be found in the folder ```semisupervised```. The implementation corresponds to the variant ```GMNN W/o Attr. in p_\phi``` in the Table 2 of the original paper. To run the codes, go to the folder ```semisupervised/codes``` and execute ```python run_cora.py```. Then the program will print the results over 100 runs with seeds 1-100.
+The codes for semi-supervised object classification can be found in the folder ```semisupervised```. The implementation corresponds to the variant ```GMNN W/o Attr. in p``` in the Table 2 of the original paper. To run the codes, go to the folder ```semisupervised/codes``` and execute ```python run_cora.py```. Then the program will print the results over 100 runs with seeds 1-100.
 
 The results are summarized in the following tables:
+
 | Dataset | Cora | Citeseer | Pubmed |
 | --------  |----------|----------|----------| 
 | GMNN | 83.4 (0.8) | 73.0 (0.8) | 81.3 (0.5) |
 
-The codes for unsupervised node representation learning are in the folder ```unsupervised```. The implementation corresponds to the variant ```GMNN With q_\theta and p_\phi``` in the Table 3 of the original paper.  To run the codes, go to the folder ```unsupervised/codes``` and execute ```python run_cora.py```. Then the program will print the results over 50 runs with seeds 1-50.
+The codes for unsupervised node representation learning are in the folder ```unsupervised```. The implementation corresponds to the variant ```GMNN With q and p``` in the Table 3 of the original paper.  To run the codes, go to the folder ```unsupervised/codes``` and execute ```python run_cora.py```. Then the program will print the results over 50 runs with seeds 1-50.
 
 The results are summarized in the following tables:
+
 | Dataset | Cora | Citeseer |
 | --------  |----------|----------|
 | GMNN | 82.6 (0.5) | 71.4 (0.5) |
