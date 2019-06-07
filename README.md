@@ -38,7 +38,7 @@ The mean accuracy and standard deviation are summarized in the following tables:
 | --------  |----------|----------|----------| 
 | GMNN | 83.4 (0.8) | 73.0 (0.8) | 81.3 (0.5) |
 
-The codes for unsupervised node representation learning are in the folder ```unsupervised```. The implementation corresponds to the variant ```GMNN With q and p``` in the Table 3 of the original paper.  To run the codes, go to the folder ```unsupervised/codes``` and execute ```python run_cora.py```. Then the program will print the results over 50 runs with seeds 1~50.
+The codes for unsupervised node representation learning are in the folder ```unsupervised```. The implementation corresponds to the variant ```GMNN With q and p``` in the Table 3 of the original paper.  To run the codes, go to the folder ```unsupervised/codes``` and execute ```python run_cora.py```. Then the program will print the results over 50 runs.
 
 The mean accuracy and standard deviation are summarized in the following tables:
 
