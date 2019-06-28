@@ -58,6 +58,7 @@ Please cite the following paper if you use the codes of GMNN. Thank you!
 title={GMNN: Graph Markov Neural Networks},
 author={Qu, Meng and Bengio, Yoshua and Tang, Jian},
 booktitle={International Conference on Machine Learning},
+pages={5241--5250},
 year={2019}
 }
 ```
