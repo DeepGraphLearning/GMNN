@@ -65,6 +65,8 @@ The results reported in the previous section are not carefully tuned, and there 
 
 7. Use more effective strategies for early stopping in training.
 
+8. Tune the weight of the unsupervised objective function for training GNNq.
+
 ## Acknowledgement
 Some codes of the project are from the following repo: [pygcn](https://github.com/tkipf/pygcn).
 
