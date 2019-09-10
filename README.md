@@ -63,6 +63,8 @@ The results reported in the previous section are not carefully tuned, and there 
 
 6. Adjust the annealing temperature when using GNNp to annotate unlabeled objects.
 
+7. Use more effective strategies for early stopping in training.
+
 ## Acknowledgement
 Some codes of the project are from the following repo: [pygcn](https://github.com/tkipf/pygcn).
 
