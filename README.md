@@ -46,9 +46,22 @@ The mean accuracy and standard deviation are summarized in the following tables:
 | --------  |----------|----------|
 | GMNN | 82.6 (0.5) | 71.4 (0.5) |
 
-Note that the numbers are slightly different from those in the paper, since we make some changes to the codes before release.
+Note that the numbers are slightly different from those in the paper, since we make some changes to the codes before release. In addition, the above experiment was conducted with ```PyTorch 0.4.1```, and the results might be slightly different if different versions of PyTorch are used.
 
-In addition, the above experiment was conducted with ```PyTorch 0.4.1```, and the results might be slightly different if different versions of PyTorch are used.
+## Further Improvement
+The results reported in the previous section are not carefully tuned, and there is still a lot of room for further improvement. For example, by slightly tuning the model, the results on semi-supervised object classification can easily reach ```83.675 (Cora)```,  ```73.576 (Citeseer)```, ```81.922 (Pubmed)```, as reported in the appendix of the paper. Some potential ways for further improving the results include:
+
+1. Train the model for longer iterations.
+
+2. Use more complicated architectures for GNNp and GNNq.
+
+3. Use different learning rate and number of training epochs for GNNp and GNNq.
+
+4. Draw more samples to approximate the expectation terms in objective functions.
+
+5. Integrate GNNp and GNNq for final prediction.
+
+6. Adjust the annealing temperature when using GNNp to annotate unlabeled objects.
 
 ## Acknowledgement
 Some codes of the project are from the following repo: [pygcn](https://github.com/tkipf/pygcn).
