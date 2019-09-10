@@ -48,11 +48,13 @@ The mean accuracy and standard deviation are summarized in the following tables:
 
 Note that the numbers are slightly different from those in the paper, since we make some changes to the codes before release.
 
+In addition, the above experiment was conducted with ```PyTorch 0.4.1```, and the results might be slightly different if different versions of PyTorch are used.
+
 ## Acknowledgement
 Some codes of the project are from the following repo: [pygcn](https://github.com/tkipf/pygcn).
 
 ## Citation
-Please cite the following paper if you use the codes of GMNN. Thank you!
+Please consider citing the following paper if you find our codes helpful. Thank you!
 ```
 @inproceedings{qu2019gmnn,
 title={GMNN: Graph Markov Neural Networks},

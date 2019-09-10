@@ -7,22 +7,6 @@ from torch.autograd import Variable
 import torch.nn.functional as F
 from torch.nn.parameter import Parameter
 
-class SparseMM(torch.autograd.Function):
-
-    def __init__(self, sparse):
-        super(SparseMM, self).__init__()
-        self.sparse = sparse
-
-    def forward(self, dense):
-        return torch.mm(self.sparse, dense)
-
-    def backward(self, grad_output):
-        grad_input = None
-        if self.needs_input_grad[0]:
-            grad_input = torch.mm(self.sparse.t(), grad_output)
-        return grad_input
-
-
 class GraphConvolution(nn.Module):
 
     def __init__(self, opt, adj):
@@ -40,5 +24,5 @@ class GraphConvolution(nn.Module):
     
     def forward(self, x):
         m = torch.mm(x, self.weight)
-        m = SparseMM(self.adj)(m)
+        m = torch.spmm(self.adj, m)
         return m
