@@ -1,6 +1,20 @@
 # GMNN
 This is an implementation of the [GMNN (Graph Markov Neural Networks)](https://arxiv.org/abs/1905.06214) model.
 
+Table of Contents
+=================
+<!--ts-->
+* [Introduction](#introduction)
+* [Illustration](#illustration)
+     * [Two Graph Neural Networks](#Two-Graph-Neural-Networks)
+     * [Optimization](#optimization)
+* [Data](#data)
+* [Usage](#usage)
+* [Further Improvement](#further-improvement)
+* [Acknowledgement](#acknowledgement)
+* [Citation](#citation)
+<!--te-->
+
 ## Introduction
 GMNN integrates **statistical relational learning methods** (e.g., relational Markov networks and Markov logic networks) and **graph neural networks** (e.g., graph convolutional networks and graph attention networks) for semi-supervised object classification. GMNN uses a conditional random field to define the joint distribution of all the object labels conditioned on object features, and the framework can be optimized with a **pseudolikelihood variational EM algorithm**, which alternates between an E-step and M-step. In the E-step, we **infer** the labels of unlabeled objects, and in the M-step, we **learn** the parameters to maximize the pseudolikelihood.
 
