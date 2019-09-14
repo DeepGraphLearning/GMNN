@@ -6,6 +6,7 @@ Table of Contents
 <!--ts-->
 * [Introduction](#introduction)
 * [Illustration](#illustration)
+     * [Semi-supervised Object Classification](#Semi-supervised-Object-Classification)
      * [Two Graph Neural Networks](#Two-Graph-Neural-Networks)
      * [Optimization](#optimization)
 * [Data](#data)
