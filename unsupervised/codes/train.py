@@ -177,10 +177,10 @@ def update_p_data():
         inputs_p.zero_().scatter_(1, torch.unsqueeze(idx_lb, 1), 1.0)
         target_p.zero_().scatter_(1, torch.unsqueeze(idx_lb, 1), 1.0)
     if opt['use_gold'] == 1:
-        temp = torch.zeros(idx_train.size(0), target_q.size(1)).type_as(target_q)
-        temp.scatter_(1, torch.unsqueeze(target[idx_train], 1), 1.0)
-        inputs_p[idx_train] = temp
-        target_p[idx_train] = temp
+        temp = torch.zeros(idx_train_pseudo.size(0), target_q.size(1)).type_as(target_q)
+        temp.scatter_(1, torch.unsqueeze(target_pseudo[idx_train_pseudo], 1), 1.0)
+        inputs_p[idx_train_pseudo] = temp
+        target_p[idx_train_pseudo] = temp
 
 def update_q_data():
     preds = trainer_p.predict(inputs_p)
